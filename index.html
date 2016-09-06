@@ -24,6 +24,29 @@
 	<li>carrot</li>
   </ol>
   <script>
+	var shortener = "<p style=\"font-size: 20px; color: #2F4F4F;\">";
+	document.write(shortener + "HELLO" + "</p>");
+	//objects
+	function person(name, age) {
+		this.name = name;
+		this.age = age;
+		this.yearOfBorn = bornYear;
+		this.changeName = function(name) {
+			this.name = name;
+		}
+	}
+	
+	var p1 = new person("Ivan", 22);
+	document.write("<p style=\"font-size: 20px; color: 	#2F4F4F;\"> Name = " + p1.name + "</br> Age = " + p1.age + "</p>");
+	p1.changeName('Balvan')
+	document.write("<p style=\"font-size: 20px; color: 	#2F4F4F;\"> Name = " + p1.name + "</br> Age = " + p1.age + "</p>");
+	
+	function bornYear() {
+		return 2016 - this.age;
+	}
+	document.write(shortener + " Name = " + p1.yearOfBorn() +  "</p>");
+	
+	//functions
 	function sumXY(x, y) {
 		return(x+y);
 	}
